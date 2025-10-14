@@ -1,63 +1,112 @@
-@font-face {
-    font-family: hell;
-    src: url(./fonts/Helvetica.woff);
-}
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html,body{
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
-.main{
-    width: 100%;
+main{
     height: 100%;
-    background: rgb(31, 30, 29);
+    width: 100%;
+    background: #000;
     padding: 20px;
-    font-family:hell;
-    color: rgb(248, 246, 246);
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .34fr 0.66fr;
+    gap: 5px;
+    
+    grid-template-areas: "nav1 nav1 nav2"
+                         "left center right"
+                         
 }
 
-.card{
-    width: 200px;
-    height: 250px;
-    background-color: rgb(77, 73, 73);
-    box-shadow: 5px 5px 10px black;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.card button{
-    padding: 10px 20px;
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
-    background: green;
-    cursor: pointer;
-}
-
-.card img{
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
+.nav1{
+    background-color: coral;
+    grid-area: nav1;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135630.png);
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
+    
+}
+.nav2{
+    background-color: tomato;
+    grid-area: nav2;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135638.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
+    
 }
 
-.card h3{
-    font-weight: 500;
+.left{
+    
+    grid-area: left;
+    display: grid;
+    gap:5px;
+    grid-template-rows: 0.75fr 0.25fr;
+    grid-template-areas: "leftdivup"
+                         "leftdivdown";
 }
 
-button:hover{
-    background: yellow;
+.leftdivup{
+    
+    grid-area: leftdivup;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135646.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
 }
+
+.leftdivdown{
+   
+    grid-area: leftdivdown;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135730.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
+}
+
+
+.center{
+    
+    grid-area: center;
+    gap:5px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: "centertop"
+                         "centerdown";  
+}
+.centertop{
+    background-color: darkgoldenrod;
+    grid-area: centertop;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135658.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
+}
+
+.centerdown{
+    background-color: darkorchid;
+    grid-area: centerdown;background-image: url(./img/Screenshot\ 2025-10-11\ 135719.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
+}
+
+
+.right{
+    background-color: greenyellow;
+    grid-area: right;
+    background-image: url(./img/Screenshot\ 2025-10-11\ 135709.png);
+    background-size: cover;
+    background-position: center;
+     border-radius: 10px;
+
+}
+
