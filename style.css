@@ -1,100 +1,83 @@
 @font-face {
-    font-family: main;
-    src: url(./fonts/Helvetica.woff);
+    font-family: sebb;
+    src: url(./sf-pro-display_regular.woff2);
 }
 
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
-    width: 100%;
+html,
+body{
     height: 100%;
+    width: 100%;
 }
 
 .main{
+    height: 90%;
     width: 100%;
-    height: 100%;
-    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf4b076-baf2-4e20-bf43-37175271e72c/dfwffqf-decb8885-404f-4c93-90ba-f902b7328c78.png/v1/fill/w_1280,h_800,q_80,strp/demon_slayer_4k_wallpaper_by_vilex45_dfwffqf-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODAwIiwicGF0aCI6Ii9mL2NiZjRiMDc2LWJhZjItNGUyMC1iZjQzLTM3MTc1MjcxZTcyYy9kZndmZnFmLWRlY2I4ODg1LTQwNGYtNGM5My05MGJhLWY5MDJiNzMyOGM3OC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.CmS2LbHyLZQzRU49EOnp9jAEfTd8sqeDtaLgdu7RxE8);
-    background-size: cover;
-    background-position:center;
-    position: relative;
-    font-family: main;
+    background: #000;
+    font-family: sebb;
+    color: white;
 }
 
 .nav{
-    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    height: 7vh;
     width: 100%;
-    height: 15vh;
-    color: white;
-    background-color:rgba(0,0, 0, 0.5);
-    display: flex;
-    justify-content:flex-start;
-    gap: 10vw;
-    align-items: center;
-    
-    
+    background: #1D1D1F;
+    justify-content: center;
+    gap: 36px;
 }
 
-.nav img{
-    height: 125%; 
-     filter: invert(100%);
-  -webkit-filter: invert(100%);
-  margin-left: 2vw;
-    
-}
-
-.titles{
-    display: flex;
-    justify-content:flex-start;
-    gap: 10vw;
-    align-items: center;
-}
-
-.titles h2{
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.titles button{
-    position: absolute;
-    right: 7%;
-    border-radius: 10px;
-    font-size: 50px;
-    padding: 12px 24px;
-    background-color: transparent;
-    color: white;
-    border-color: white;
+.nav h4{
+    font-weight: 300;
+    font-size: 13px;
 }
 
 .hero{
     width: 100%;
-    height: 85vh;
-    position: relative;
+    height: 95%;
+    text-align: center;
+    margin-top: 30px;
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_medium.jpg);
+    background-size: cover;
+   background-position: center;
 }
 
- .textt h1{
-    position: absolute;
-    top: 18vh;
-    left: 4vw;
-    font-family: main; 
-    font-weight: 500;
-    color: rgb(255, 183, 89);
-    font-size: 220px;
-    width: 50%;
-    
+.texts h1{
+    font-size: 60px;
+    font-weight: 600;
 }
 
-button{
-    margin-top: 3vh;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: blanchedalmond;  
+.hero h3{
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
-    border-radius: 10px;
-    border-color: blanchedalmond;
-    
-    background: transparent;
-} 
+.hero button{
+    background: #0077ED;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.ndbut{
+    background: trasparent;
+    border: 1px solid #0077ED;
+}
+
+.buttons{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+   
+}
+
