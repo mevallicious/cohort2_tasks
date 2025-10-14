@@ -1,0 +1,153 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.one{
+    color: #fff;
+    background: #07123d;
+    padding: 10vh;  
+}
+
+.one h1{
+    font-size:120px;
+}
+
+.one h3{
+    margin-top: 2vh;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.two{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    margin-left: 25vh;
+    margin-right: 25vh;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    background: #fffef3;
+}
+
+.two h2{
+    font-size: 50px;
+}
+
+.two p{
+    font-size: 32px;
+    padding: 2vh;
+    text-transform: none;
+}
+ 
+.three{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+     margin-left: 25vh;
+    margin-right: 25vh;
+    padding-top:  5vh;
+    padding-bottom:  5vh;
+    background: rgb(208, 232, 248);
+}
+
+.three h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.three h4{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    font-size: 30px;
+    background: #fff;
+    padding: 2vh;
+    
+}
+
+.four{
+     margin-top: 4vh;
+    margin-bottom: 4vh;
+     margin-left: 25vh;
+    margin-right: 25vh;
+    padding-top:  5vh;
+    padding-bottom:  5vh;
+    background: rgb(248, 241, 180);
+}
+
+.four h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.four h4{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    padding: 2vh;
+    font-size: 34px;
+    background: #fff;
+    text-transform: uppercase;
+   font-weight: bolder;
+}
+
+.five{
+     margin-top: 4vh;
+    margin-bottom: 4vh;
+     margin-left: 25vh;
+    margin-right: 25vh;
+    padding-top:  5vh;
+    padding-bottom:  5vh;
+    background: rgb(187, 135, 255);
+}
+
+.five h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.five h4{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    padding: 2vh;
+    font-size: 34px;
+    background: #fff;
+    text-transform: none;
+    font-style: italic;
+   font-weight: 500;
+}
+
+.six{
+    text-transform: none;
+    font-weight: 500;
+}
+
+.seven {
+    font-size: 20px;
+    font-weight: 100;
+    background: #07123d;
+    color: #fff;
+    
+}
+
+.seven h4{
+    font-weight: 200;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
