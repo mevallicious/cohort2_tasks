@@ -1,0 +1,691 @@
+@font-face {
+    font-family: hell;
+    src: url(./Helvetica.woff);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background: #121212;
+    color: white;
+  }
+  
+  @mixin flexCenter($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  section {
+    max-width: 1600px;
+  }
+  
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem 1rem;
+    font-family: hell;
+    align-items: center;
+  
+    nav {
+      width: 100%;
+      height: 70px;
+      @include flexCenter(space-between);
+      padding-left: 0.5rem;
+      text-transform: uppercase;
+  
+      .left-nav {
+        opacity: 0.8;
+      }
+  
+      .right-nav {
+        @include flexCenter();
+        gap: 0.5rem;
+      }
+  
+      .right-nav .one {
+        @include flexCenter();
+        gap: 0.4rem;
+        padding: 0.7rem 1.25rem;
+        background: #ffffff0d;
+        border-radius: 0.7rem;
+      }
+  
+      .right-nav .one .in {
+        @include flexCenter(center, flex-end);
+        background: #cebd63;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        font-size: 1rem;
+        color: black;
+      }
+  
+      .right-nav .two {
+        padding: 0.6rem 1.25rem;
+        background: #ffffff0d;
+        border-radius: 0.7rem;
+      }
+  
+      i {
+        font-weight: 100;
+        font-size: 1.7rem;
+      }
+  
+      h4 {
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+    }
+  
+    .viewone {
+      flex-direction: column;
+      @include flexCenter();
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
+  
+      .top-view {
+        width: 100%;
+      }
+  
+      .top-view img {
+        border-radius: 0.7rem;
+        width: 100%;
+        height: auto;
+      }
+  
+      .down-view {
+        @include flexCenter(space-between, flex-direction);
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+  
+        background: #ffffff0d;
+        padding: 1rem 2rem;
+        border-radius: 0.7rem;
+  
+        .small {
+          padding-top: 1rem;
+          padding-bottom: 3.7rem;
+          text-transform: uppercase;
+  
+          h4 {
+            font-weight: 400;
+            font-size: 0.8rem;
+          }
+        }
+        h1 {
+          font-weight: 400;
+          opacity: 0.9;
+          font-size: 2.2rem;
+          text-transform: uppercase;
+          padding-bottom: 4%;
+        }
+  
+        p {
+          font-weight: 300;
+          // font-size: 1.3rem;
+          line-height: 2rem;
+          opacity: 0.4;
+        }
+      }
+  
+      .down-view .verse {
+        margin-top: 2rem;
+        @include flexCenter(flex-start, center);
+        gap: 7px;
+      }
+  
+      .verse .arrow {
+        font-size: 1.5rem;
+        opacity: 0.4;
+        background: #ffffff0d;
+        padding: 0.5rem;
+        @include flexCenter();
+        border-radius: 50%;
+        border: 1px solid #6d6b6b;
+      }
+  
+      .down-view .arrow h4 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+      }
+  
+      .bottom-view {
+        display: grid;
+        width: 100%;
+        height: 300px;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          "oo ee"
+          "ii aa";
+        gap: 1rem;
+        text-transform: uppercase;
+  
+        @mixin fonting() {
+          font-weight: 500;
+          font-size: 2.5rem;
+        }
+  
+        @mixin h4($value, $weight) {
+          opacity: $value;
+          font-weight: $weight;
+        }
+  
+        .clientone {
+          grid-area: oo;
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.7rem;
+          h2 {
+            @include fonting();
+          }
+  
+          h4 {
+            @include h4(0.7, 400);
+          }
+        }
+        .clienttwo {
+          grid-area: ee;
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.7rem;
+          h2 {
+            @include fonting();
+          }
+  
+          h4 {
+            @include h4(0.7, 400);
+          }
+        }
+        .clientthree {
+          grid-area: ii;
+          flex-direction: column;
+          @include flexCenter();
+          gap: 0.7rem;
+          h2 {
+            @include fonting();
+          }
+  
+          h4 {
+            @include h4(0.7, 400);
+          }
+        }
+  
+        .clientfour {
+          grid-area: aa;
+          flex-direction: column;
+          @include flexCenter();
+          gap: 0.7rem;
+          h2 {
+            @include fonting();
+          }
+  
+          h4 {
+            @include h4(0.7, 400);
+          }
+        }
+      }
+    }
+  
+    .viewtwo {
+      margin-top: 1rem;
+      @include flexCenter(center, flex-start);
+      flex-direction: column;
+      gap: 1rem;
+  
+      .team {
+        text-transform: uppercase;
+  
+        h3 {
+          padding-left: 1rem;
+          font-weight: 400;
+          font-size: 2rem;
+          opacity: 0.9;
+        }
+      }
+  
+      .cards {
+        width: 100%;
+        @include flexCenter(space-between);
+        flex-direction: column;
+        gap: 1rem;
+  
+        .card {
+          position: relative;
+  
+          width: 100%;
+  
+          border-radius: 0.7rem;
+        }
+  
+        .card img {
+          width: 100%;
+  
+          border-radius: 0.7rem;
+        }
+  
+        .card .container {
+          @include flexCenter(center, center);
+          text-transform: uppercase;
+          gap: 20%;
+          position: absolute;
+          bottom: 1.3rem;
+          left: 1rem;
+          border-radius: 0.3rem;
+          background-color: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          width: 90%;
+          backdrop-filter: blur(2rem);
+          color: white;
+          height: 18%;
+        }
+  
+        .card .container h3 {
+          font-weight: 400;
+          font-size: 1.2rem;
+        }
+  
+        .card .container h5 {
+          font-weight: 300;
+          font-size: 0.8rem;
+        }
+  
+        .small-feeds {
+          @include flexCenter(space-between, center);
+          gap: 0.7rem;
+          z-index: 99;
+          right: 2.3rem;
+          top: 3rem;
+          position: absolute;
+        }
+  
+        .small-feeds a {
+          width: 2.4rem;
+          height: 2.4rem;
+          border-radius: 50%;
+          background: #ffffff0d;
+          font-size: 1.3rem;
+          @include flexCenter();
+          color: rgba(255, 253, 253, 0.811);
+          text-decoration: none;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+  
+        .small-feeds i {
+          font-weight: 300;
+        }
+      }
+  
+      .teamtwo {
+        @include flexCenter(center, flex-start);
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+  
+        .shapeone {
+          background: none;
+        }
+        .shape {
+          width: 100%;
+          border-radius: 0.7rem;
+          background: #ffffff0d;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+  
+          h4 {
+            padding: 1rem;
+            font-weight: 500;
+            opacity: 0.7;
+          }
+  
+          h1 {
+            padding: 1rem;
+            font-weight: 500;
+          }
+  
+          img {
+            width: 100%;
+            border-radius: 0.7rem;
+          }
+  
+          .verse-two {
+            padding-left: 1rem;
+            @include flexCenter(flex-start, center);
+  
+            .arrow-two {
+              opacity: 0.4;
+              background: #ffffff0d;
+              padding: 0.5rem;
+              @include flexCenter();
+              border-radius: 50%;
+              border: 1px solid #6d6b6b;
+            }
+          }
+        }
+  
+        .touch {
+          color: black;
+          width: 100%;
+          padding: 1rem;
+          padding-bottom: 0;
+          border-radius: 0.7rem;
+          background: #cebd63;
+          text-transform: uppercase;
+  
+          h4 {
+            padding: 1rem;
+            font-weight: 500;
+          }
+  
+          h1 {
+            padding: 1rem;
+            font-weight: 500;
+          }
+  
+          .touching {
+            padding: 1rem, 2rem;
+            background: #000;
+            color: white;
+            @include flexCenter(center, center);
+            width: 90%;
+            margin: 1rem;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  
+    footer {
+      margin-top: 1rem;
+      width: 100%;
+      display: grid;
+      grid-column: 1fr;
+      grid-template-rows: 0.2fr 0.6fr 0.2fr;
+      grid-template-areas:
+        "up"
+        "center"
+        "down";
+      gap: 0.5rem;
+  
+      .alvy {
+        grid-area: up;
+        padding: 1rem;
+        background: #ffffff0d;
+        flex-direction: column;
+        @include flexCenter(center, flex-start);
+        border-radius: 0.7rem;
+        gap: 3rem;
+  
+        h4 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          opacity: 0.7;
+        }
+  
+        .small-feeds {
+          @include flexCenter(space-between, center);
+          gap: 0.7rem;
+  
+          a {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background: #ffffff0d;
+            font-size: 1.3rem;
+            @include flexCenter();
+            color: rgba(255, 253, 253, 0.811);
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+  
+          i {
+            font-weight: 300;
+          }
+        }
+      }
+  
+      .centeralvy {
+        grid-area: center;
+  
+        background: #ffffff0d;
+        border-radius: 0.7rem;
+        padding: 1rem;
+        gap: 1rem;
+        width: 100%;
+        text-transform: uppercase;
+  
+        .uppercenter,
+        .centercenter,
+        .downcenter {
+          gap: 1rem;
+          margin-bottom: 2rem;
+          @include flexCenter(center, flex-start);
+          flex-direction: column;
+  
+          h3 {
+            font-weight: 400;
+          }
+  
+          .coca {
+            gap: 1rem;
+            opacity: 0.7;
+            flex-direction: column;
+            @include flexCenter(center, flex-start);
+  
+            h5 {
+              font-weight: 400;
+            }
+          }
+  
+          .temp {
+            padding: 10px;
+            border-radius: 0.3rem;
+            text-align: center;
+            width: 180px;
+            background: #cebd63;
+            color: black;
+  
+            h5 {
+              font-weight: 200;
+            }
+          }
+        }
+  
+        .downcenter {
+          margin-bottom: 1rem;
+        }
+      }
+  
+      .lastalvy {
+        background: #ffffff0d;
+        border-radius: 0.7rem;
+        padding: 1rem;
+        gap: 1rem;
+        width: 100%;
+        flex-direction: column;
+        @include flexCenter(center, center);
+        text-transform: uppercase;
+  
+        h4 {
+          font-weight: 400;
+        }
+  
+        .topiing {
+          @include flexCenter(center, center);
+          gap: 0.5rem;
+  
+          .arrow-three {
+            opacity: 0.4;
+            background: #ffffff0d;
+            padding: 0.5rem;
+            @include flexCenter();
+            border-radius: 50%;
+            border: 1px solid #6d6b6b;
+  
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 900px) {
+    main {
+      .vieww {
+        @include flexCenter(center, flex-end);
+        gap: 1rem;
+        .top-view {
+          width: 50%;
+        }
+        .down-view {
+          width: 50%;
+          height: 100%;
+          h1 {
+            font-size: 3.4rem;
+          }
+          p {
+            font-size: 1.8rem;
+            line-height: 1.3;
+          }
+          .small {
+            padding-bottom: 9.5rem;
+          }
+        }
+      }
+  
+      .vieww-2 {
+        @include flexCenter(center, flex-end);
+        flex-direction: row-reverse;
+        gap: 1rem;
+        .top-view {
+          width: 50%;
+        }
+        .down-view {
+          width: 50%;
+  
+          h1 {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 1.3rem;
+          }
+  
+          .small {
+            padding-bottom: 9.2rem;
+          }
+        }
+      }
+  
+      .vieww-3 {
+        @include flexCenter(center, flex-end);
+  
+        gap: 1rem;
+        align-items: stretch;
+        .top-view {
+          width: 50%;
+          display: flex;
+          align-items: center;
+        }
+        .down-view {
+          width: 50%;
+  
+          h1 {
+            font-size: 2.7rem;
+          }
+          p {
+            font-size: 1.3rem;
+          }
+  
+          .small {
+            padding-bottom: 9rem;
+          }
+        }
+      }
+  
+      .cards {
+        @include flexCenter();
+        flex-direction: row !important;
+        gap: 1rem;
+        padding: 1rem 2rem;
+  
+        .card {
+          width: 30%;
+        }
+      }
+  
+      .vieww-4 {
+        @include flexCenter(center, flex-end);
+        gap: 1rem;
+        .shape {
+          width: 50%;
+        }
+  
+        .shapetwo {
+          @include flexCenter(center, flex-start);
+          flex-direction: column;
+          gap: 93px;
+  
+          h1 {
+            font-size: 3rem;
+          }
+        }
+      }
+  
+      footer {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 70% 30%;
+        grid-template-areas:
+          "up center"
+          "up down";
+        gap: 0.5rem;
+      }
+  
+      .alvy {
+        grid-area: up;
+        justify-content:space-between;
+        align-items: flex-start ;
+        gap: 13rem;
+        flex-direction: column;
+      }
+      .centeralvy {
+        grid-area: center;
+        @include flexCenter(center, center);
+        gap: 10px;
+        flex-direction: row;
+  
+        .uppercenter,
+        .centercenter,
+        .downcenter {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .lastalvy {
+        grid-area: down;
+      }
+    }
+  }
+  
